@@ -8,7 +8,7 @@ public class program {
         boolean g = true ^ false;     //true
         boolean h = true ^ true;     //false
         var a = 123; 
-        int i = 123;
+        //int i = 123;
         int d = 124;
         d++; 
         int[] arr = new int[10];                
@@ -22,7 +22,7 @@ public class program {
         System.out.println(h);
         System.out.println(a);
         System.out.println(getType(a));  //Integer
-        System.out.println(Integer.MAX_VALUE); //2147483647 (класс-обертка для типа int, чтобы получить больший функционал)
+        //System.out.println(Integer.MAX_VALUE); //2147483647 (класс-обертка для типа int, чтобы получить больший функционал)
         System.out.println(d); //125; или записать System.out.println(++d), т.е. без верхнего d++;
         System.out.println(arr[3]);
     }
