@@ -21,8 +21,8 @@ public class program {
         System.out.println(g);
         System.out.println(h);
         System.out.println(a);
-        System.out.println(getType(a));
-        System.out.println(Integer.MAX_VALUE); //2147483647 (класс-обертка для типа int, чтобы получить больштй функционал)
+        System.out.println(getType(a));  //Integer
+        System.out.println(Integer.MAX_VALUE); //2147483647 (класс-обертка для типа int, чтобы получить больший функционал)
         System.out.println(d); //125; или записать System.out.println(++d), т.е. без верхнего d++;
         System.out.println(arr[3]);
     }
