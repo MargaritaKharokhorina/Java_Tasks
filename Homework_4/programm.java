@@ -41,37 +41,39 @@ if (input.equals("y")) {
     array = getSortedArray(data, 5, orderIndexes, true);
     orderIndexes = getIndexesArray(array);
     specialPrintArrayList(data, orderIndexes);
-  }
 }
-static void specialPrintArrayList(ArrayList<String[]> data, int[] orderIndexes) {
-    for (int i : orderIndexes) {
-        for (int j = 1; j < data.get(i).length; j++) {
-            if (j != 2 && j != 3) {
-                System.out.print(data.get(i)[j] + " ");
-            } else System.out.print(data.get(i)[j].charAt(0) + ". ");
+    }
+    static void specialPrintArrayList(ArrayList<String[]> data, int[] orderIndexes) {
+        for (int i : orderIndexes) {
+            for (int j = 1; j < data.get(i).length; j++) {
+                if (j != 2 && j != 3) {
+                    System.out.print(data.get(i)[j] + " ");
+                } else System.out.print(data.get(i)[j].charAt(0) + ". ");
+            }
+            System.out.println();
         }
-        System.out.println();
-    }
-}
-static String[][] getSortedArray(ArrayList<String[]> data, int column, int[] orderIndexes, boolean sort) {
-    String[][] array = new String[data.size()][2];
-    int index = 0;
-    for (int i : orderIndexes) {
-        array[index][0] = data.get(i)[0];
-        array[index][1] = data.get(i)[column];
-        index++;
-    }
-    if (sort) Arrays.sort(array, Comparator.comparing(arr -> arr[1]));
-    return array;
-}
 
-static int[] getIndexesArray(String[][] array) {
-    int[] orderIndexes = new int[array.length];
-    for (int i = 0; i < orderIndexes.length; i++) {
-        orderIndexes[i] = Integer.parseInt(array[i][0]);
+        }
+    static String[][] getSortedArray(ArrayList<String[]> data, int column, int[] orderIndexes, boolean sort) {
+            String[][] array = new String[data.size()][2];
+            int index = 0;
+            for (int i : orderIndexes) {
+                array[index][0] = data.get(i)[0];
+                array[index][1] = data.get(i)[column];
+                index++;
+            }
+            if (sort) Arrays.sort(array, Comparator.comparing(arr -> arr[1]));
+            return array;
+        }
+        static int[] getIndexesArray(String[][] array) {
+            int[] orderIndexes = new int[array.length];
+            for (int i = 0; i < orderIndexes.length; i++) {
+                orderIndexes[i] = Integer.parseInt(array[i][0]);
+            }
+            return orderIndexes;
+        }
+        
     }
-    return orderIndexes;
-}
-}
+
 
         
