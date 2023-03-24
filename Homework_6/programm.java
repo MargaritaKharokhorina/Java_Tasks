@@ -13,13 +13,13 @@ public class programm {
         myset.putElement(9);
         myset.putElement(12);
         myset.myPrint();
-        //System.out.println(myset.myContains(5));
-        //myset.myRemove(5);
-        //System.out.println(myset.mySize());
-        System.out.println("Элемент с индексом [2]:");
-        System.out.println(myset.myReturn(2));
-       // System.out.println("Элемент с индексом [2]:");
-        System.out.println(myset.myKeyList());
+        System.out.println(myset.myContains(5)); //- false
+        myset.myRemove(5);
+        System.out.println("Размер:");
+        System.out.println(myset.mySize());
+        System.out.println("Элемент с индексом [3]:");
+        System.out.println(myset.myReturn(3)); // 7
+        //System.out.println(myset.myKeyList());
         System.out.println(myset.myRetList());
         System.out.println("Очистка:");
         myset.myClear();
